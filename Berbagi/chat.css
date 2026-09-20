@@ -1,0 +1,47 @@
+:root{
+  --bg-main:#2f3136;
+  --bg-msg:#36393f;
+  --bg-self:#5865f2;
+  --text-main:#dcddde;
+  --text-name:#ffffff;
+  --text-time:#b9bbbe;
+  --radius:12px;
+  --avatar-size:36px;
+  --font:"Segoe UI","Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box;}
+body{
+  background:var(--bg-main);
+  color:var(--text-main);
+  font-family:var(--font);
+  margin:0;padding:20px;
+}
+#chatBox{
+  height:70vh;overflow-y:auto;background:none;border:none;padding:0 8px;
+  scroll-behavior:smooth;
+}
+.chat-row{display:flex;gap:10px;margin:8px 0;}
+.chat-row.self{flex-direction:row-reverse;}
+.avatar{
+  width:var(--avatar-size);height:var(--avatar-size);
+  border-radius:50%;background:#72767d;flex-shrink:0;
+}
+.bubble{
+  max-width:70%;background:var(--bg-msg);
+  border-radius:var(--radius);padding:8px 12px;word-wrap:break-word;
+}
+.chat-row.self .bubble{background:var(--bg-self);}
+.name{
+  font-size:14px;font-weight:700;color:var(--text-name);
+}
+.time{
+  font-size:11px;color:var(--text-time);margin-left:4px;
+}
+.msg-img{
+  max-width:250px;border-radius:var(--radius);margin-top:6px;
+}
+a.msg-pdf{color:#00aff4;text-decoration:none;font-weight:600;}
+.chat-reply{
+  font-size:12px;background:#202225;padding:6px;border-left:3px solid #00aff4;
+  border-radius:6px;margin:6px 0;
+}

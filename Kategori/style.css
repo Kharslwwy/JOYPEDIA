@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    margin: 20px;
+}
+
+/* Layout kategori dengan Flexbox */
+.kategori-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Memberikan jarak antar kategori */
+}
+
+.kategori-item {
+    width: calc(33.33% - 20px); /* Membuat 3 kategori per baris */
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.category-item {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Styling untuk emoji */
+.emoji {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+/* Gaya untuk kategori yang dipilih */
+a.selected .category-item {
+    background-color: #0066cc;
+    color: white;
+    transform: scale(1.05); /* Efek zoom ketika kategori dipilih */
+}
+
+/* Artikel */
+.article {
+    background-color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.article img {
+    width: 100%; /* Sesuaikan dengan lebar konten */
+    height: auto;
+    border-radius: 5px;
+}
+
+.article h3 {
+    font-size: 1.2em;
+}
+
+.article p {
+    font-size: 1em;
+}
+
+.article a {
+    color: #0066cc;
+    text-decoration: none;
+}
